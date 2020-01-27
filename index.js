@@ -61,10 +61,6 @@ function makePersonObject(badgeNumber, person, contact) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(array) {
-  // personName = {
-  //   name: "name"
-  // };
-  // return "Hello, my name is personName.name";
 return "hello my name is " + array.name;
 }
 
@@ -81,8 +77,16 @@ return "hello my name is " + array.name;
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(nameArg) {
+  return {
+    name: nameArg,
+    sum:  function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function(){
+      return "Hello my name is " + nameArg;
+    }
+  }
 }
 
 
