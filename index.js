@@ -60,8 +60,8 @@ function makePersonObject(badgeNumber, person, contact) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(array) {
-return "hello my name is " + array.name;
+function getName(object) {
+return "hello my name is " + object.name;
 }
 
 /**
@@ -148,8 +148,6 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  // const make = inventory[index].car_make;
-  // const model = inventory[index].car_model;
   return "This is a " + inventory[index].car_make + " " + inventory[index].car_model;
 }
 
@@ -164,8 +162,8 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(cars) {
+  return "This is a " + cars[cars.length-1].car_make + " " + cars[cars.length-1].car_model;
 }
 
 /**
