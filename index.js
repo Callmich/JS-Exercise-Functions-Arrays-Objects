@@ -60,8 +60,12 @@ function makePersonObject(badgeNumber, person, contact) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName({name: "{name}"}) {
-  return "Hello, my name is " + getName.name;
+function getName(array) {
+  // personName = {
+  //   name: "name"
+  // };
+  // return "Hello, my name is personName.name";
+return "hello my name is " + array.name;
 }
 
 /**
