@@ -180,11 +180,11 @@ function getLastCarInfo(cars) {
 */
 function getCarInfoById(vehiclesArray, carId) {
   for (let i = 0; i < vehiclesArray.length-1; i++){
-    if (vehiclesArray.id === carId){
+    if (vehiclesArray[vehiclesArray.id] === carId)
       return "This is a " + vehiclesArray.car_make + " " + vehiclesArray.car_model;
     }
   }
-}
+
 
 /**
  * ### Challenge `sortCarInventory`
@@ -260,9 +260,18 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b)=>{
+  return a + b
+}; // code here!
+
+const addFive = (num)=>{
+  return num = 5
+}; // code here!
+
+
+const argTimesTwo = (num)=>{
+  return num *2
+}; // code here!
 
 /**
  * ### Challenge `carMaker`
