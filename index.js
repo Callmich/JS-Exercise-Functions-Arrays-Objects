@@ -189,16 +189,6 @@ function getCarInfoById(inventory, carId) {
   
   }
 
-  // for (let i = 0; i < inventory.length-1; i++){
-  //   if (inventory[0].car_make){
-  //     return "This is a " + vehicles.car_make + " " + vehicles.car_model;
-  //   }
-  // }
-
-// if (inventory.id = carId){
-//   return "This is a  ${inventory.car_make} ${inventory.car_model}";
-// }
-
 
 
 /**
@@ -231,8 +221,12 @@ function sortCarInventory(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  let carYears = [];
+  for (let i = 0; i < inventory.length; i++){
+  carYears.push(inventory[i].car_year)
+  }
+  return carYears
 }
 
 /**
